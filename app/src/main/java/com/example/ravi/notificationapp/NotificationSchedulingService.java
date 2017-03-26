@@ -62,7 +62,7 @@ public class NotificationSchedulingService extends IntentService
         SharedPreferences NotPrefs = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
         SharedPreferences.Editor editor = NotPrefs.edit();
 
-          sendNotification(message);
+          //sendNotification(message);
          if(isNetworkConnected())
          {
 
@@ -164,7 +164,7 @@ public class NotificationSchedulingService extends IntentService
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
         mBuilder.setSmallIcon(R.drawable.notify);
-        mBuilder.setContentTitle("Animal ID:1468 is in heat!");  //Notification Alert, Click Me!
+        mBuilder.setContentTitle("SmartFarm Alert!");  //Notification Alert, Click Me!
         mBuilder.setContentText(message);
         mBuilder.setAutoCancel(true);
         mBuilder.setSound(defaultSoundUri);
